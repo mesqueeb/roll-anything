@@ -24,19 +24,19 @@ import dice from 'roll-anything'
 
 const dice = dice()
 // will return
-  {
-    sides: 6,
-    roll: function
-  }
+// {
+//   sides: 6,
+//   roll: function
+// }
 
-// rolling
+// Rolling 🎲👋
 dice().roll() // will return 1 ~ 6
 dice(2).roll() // will return 1 ~ 2
 dice(10).roll() // will return 1 ~ 10
 
-// roll and evaluate
+// Roll and evaluate
 dice(6).roll(6)
-// will roll 1~6 and return true if it rolled 6 immidiately
+// will roll 1 ~ 6 and return true if it rolled 6 immidiately
 dice(2).roll(1)
 // 50-50 chance
 ```
