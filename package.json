@@ -29,7 +29,7 @@
   "homepage": "https://github.com/mesqueeb/roll-anything#readme",
   "devDependencies": {
     "ava": "^1.4.1",
-    "rollup-plugin-typescript2": "^0.21.0",
-    "typescript": "^3.4.5"
+    "rollup-plugin-typescript2": "^0.21.1",
+    "typescript": "^3.5.1"
   }
 }
