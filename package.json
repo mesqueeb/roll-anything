@@ -1,9 +1,10 @@
 {
   "name": "roll-anything",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A very tiny dice util. You can roll a dice with any amount of sides.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
+  "typings": "types/index.d.ts",
   "scripts": {
     "test": "ava",
     "rollup": "rollup -c build/rollup.js",
@@ -30,6 +31,6 @@
   "devDependencies": {
     "ava": "^1.4.1",
     "rollup-plugin-typescript2": "^0.21.2",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.3"
   }
 }
