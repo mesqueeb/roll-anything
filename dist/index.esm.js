@@ -14,8 +14,8 @@ function dice(sides) {
             if (target === undefined)
                 return randomNumber;
             return target === randomNumber;
-        }
+        },
     };
 }
 
-export default dice;
+export { dice };

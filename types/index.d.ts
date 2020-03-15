@@ -5,7 +5,7 @@
  * @param {number} [sides=6] The number of sides
  * @returns {{[sides: string]: number, [roll: string]: (?number) => (number | boolean)}}
  */
-export default function dice(sides?: number): {
+export declare function dice(sides?: number): {
     sides: number;
-    roll(target?: number): number | boolean;
+    roll: (target?: number) => number | boolean;
 };

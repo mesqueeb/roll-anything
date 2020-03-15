@@ -1,18 +1,16 @@
 {
   "name": "roll-anything",
-  "version": "0.0.4",
+  "sideEffects": false,
+  "version": "1.0.0",
   "description": "A very tiny dice util. You can roll a dice with any amount of sides.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "typings": "types/index.d.ts",
   "scripts": {
     "test": "ava",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "rollup": "rollup -c build/rollup.js",
-    "build": "npm run rollup && npm run test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mesqueeb/roll-anything.git"
+    "build": "npm run lint && npm run test && npm run rollup"
   },
   "keywords": [
     "roll",
@@ -22,15 +20,34 @@
     "fifty-fitfy",
     "flip-a-coin"
   ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "ava": "^3.5.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-tree-shaking": "^1.8.0",
+    "rollup": "^1.32.1",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
   "author": "Luca Ban - Mesqueeb",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mesqueeb/roll-anything/issues"
   },
   "homepage": "https://github.com/mesqueeb/roll-anything#readme",
-  "devDependencies": {
-    "ava": "^1.4.1",
-    "rollup-plugin-typescript2": "^0.21.2",
-    "typescript": "^3.7.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mesqueeb/roll-anything.git"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   }
 }

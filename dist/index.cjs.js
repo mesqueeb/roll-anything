@@ -18,8 +18,8 @@ function dice(sides) {
             if (target === undefined)
                 return randomNumber;
             return target === randomNumber;
-        }
+        },
     };
 }
 
-exports.default = dice;
+exports.dice = dice;

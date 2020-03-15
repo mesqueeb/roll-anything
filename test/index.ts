@@ -1,9 +1,9 @@
 import test from 'ava'
-import dice from '../dist/index.cjs'
+import { dice } from '../src/index'
 
 test('1 - 6', t => {
   const d = dice()
-  const possibilities = [1, 2, 3, 4, 5, 6]
+  const possibilities: (boolean | number)[] = [1, 2, 3, 4, 5, 6]
   t.true(possibilities.includes(d.roll()))
   t.true(possibilities.includes(d.roll()))
   t.true(possibilities.includes(d.roll()))
@@ -26,7 +26,7 @@ test('1 - 6', t => {
 
 test('1 - 2', t => {
   const d = dice(2)
-  const possibilities = [1, 2]
+  const possibilities: (boolean | number)[] = [1, 2]
   t.true(possibilities.includes(d.roll()))
   t.true(possibilities.includes(d.roll()))
   t.true(possibilities.includes(d.roll()))
@@ -37,7 +37,7 @@ test('1 - 2', t => {
 
 test('true or false', t => {
   const d = dice(2)
-  const possibilities = [true, false]
+  const possibilities: (boolean | number)[] = [true, false]
   t.true(possibilities.includes(d.roll(1)))
   t.true(possibilities.includes(d.roll(1)))
   t.true(possibilities.includes(d.roll(1)))
@@ -48,7 +48,7 @@ test('true or false', t => {
 
 test('1 - 9999', t => {
   const d = dice(9999)
-  const possibilities = []
+  const possibilities: (boolean | number)[] = []
   let i = 1
   while (i < 10000) {
     possibilities.push(i)
