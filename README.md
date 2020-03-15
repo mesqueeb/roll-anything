@@ -46,14 +46,14 @@ dice(2).roll(1)
 The source code is litterally just this, but written in TypeScript:
 
 ```js
-export default function dice (sides = 6) {
+export function dice (sides = 6) {
   return {
     sides,
     roll (target) {
       const randomNumber = Math.floor(Math.random() * this.sides) + 1
       if (target === undefined) return randomNumber
       return target === randomNumber
-    }
+    },
   }
 }
 ```
