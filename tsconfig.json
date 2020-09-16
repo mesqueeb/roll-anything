@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./types/"
+    "declarationDir": "./types/",
+    "baseUrl": "."
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "test/**/*"
   ]
 }

@@ -19,41 +19,53 @@ A very tiny dice util. You can roll a dice with any amount of sides.
 
 ## Usage
 
-```js
-import dice from 'roll-anything'
+### Roll a number
 
-const dice = dice()
-// will return
-// {
-//   sides: 6,
-//   roll: function
-// }
+```js
+import { roll } from 'roll-anything'
 
 // Rolling 🎲👋
-dice().roll() // will return 1 ~ 6
-dice(2).roll() // will return 1 ~ 2
-dice(10).roll() // will return 1 ~ 10
+roll() // returns a random number between 0-100; including 0 and 100
+roll(10) // returns a random number between 0-10; including 0 and 10
+roll(5, 10) // returns a random number between 5-10; including 5 and 10
+```
 
-// Roll and evaluate
-dice(6).roll(6)
-// will roll 1 ~ 6 and return true if it rolled 6 immidiately
-dice(2).roll(1)
-// 50-50 chance
+### Flip a coin
+
+```js
+import { flip } from 'roll-anything'
+
+flip() // returns 'heads' or 'tails' at random
+```
+
+### Dice 🎲
+
+```js
+import { Dice } from 'roll-anything'
+
+// Create a die of 6 sides
+const dice = Dice(6)
+// returns { sides: 6, roll: function }
+
+dice.roll() // returns 1 ~ 6
+dice.sides // returns 6
+
+// Rolling 🎲👋
+Dice().roll() // returns 1 ~ 6
+// → 6 sided dice is the default.
+
+Dice(2).roll() // returns 1 ~ 2
+Dice(10).roll() // returns 1 ~ 10
+
+// Roll a specific number
+Dice(6).rollAssert(6)
+// rolls 1 ~ 6
+//   then returns `true` if it rolled 6 or `false` if it didn't
+
+Dice(2).rollAssert(1)
+// 50-50 chance to get `true` or `false`
 ```
 
 ## Source code
 
-The source code is litterally just this, but written in TypeScript:
-
-```js
-export function dice (sides = 6) {
-  return {
-    sides,
-    roll (target) {
-      const randomNumber = Math.floor(Math.random() * this.sides) + 1
-      if (target === undefined) return randomNumber
-      return target === randomNumber
-    },
-  }
-}
-```
+See the source code [here](./src/index.ts).
