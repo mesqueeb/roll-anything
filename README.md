@@ -1,5 +1,8 @@
 # Roll anything 🎲
 
+<a href="https://www.npmjs.com/package/roll-anything"><img src="https://img.shields.io/npm/v/roll-anything.svg" alt="Total Downloads"></a>
+<a href="https://www.npmjs.com/package/roll-anything"><img src="https://img.shields.io/npm/dw/roll-anything.svg" alt="Latest Stable Version"></a>
+
 ```
 npm i roll-anything
 ```
