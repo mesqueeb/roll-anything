@@ -5,7 +5,7 @@
  * @returns {number}
  */
 function roll(minOrMax, max) {
-    var _min = 0, _max = 100;
+    let _min = 0, _max = 100;
     if (minOrMax === void 0) ;
     else if (max === void 0) {
         _min = 0;
@@ -32,16 +32,15 @@ function flip() {
  * @param {?number} [sides=6] The number of sides
  * @returns {{ sides: number, roll: () => number, rollAssert: (target: number) => boolean }}
  */
-function Dice(sides) {
-    if (sides === void 0) { sides = 6; }
+function Dice(sides = 6) {
     return {
-        sides: sides,
-        roll: function () {
+        sides,
+        roll() {
             return roll(1, this.sides);
         },
-        rollAssert: function (targetNumber) {
+        rollAssert(targetNumber) {
             return roll(1, this.sides) === targetNumber;
-        }
+        },
     };
 }
 
