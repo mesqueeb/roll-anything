@@ -1,7 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 /**
  * Roll any number. When passing no arguments it returns a number between 0 - 100; including 0 and 100
  * @param {number} [minOrMax] When passing only 1 argument it returns a number between 0 and the argument; including 0 and the argument
@@ -45,10 +41,8 @@ function Dice(sides) {
         },
         rollAssert: function (targetNumber) {
             return roll(1, this.sides) === targetNumber;
-        },
+        }
     };
 }
 
-exports.Dice = Dice;
-exports.flip = flip;
-exports.roll = roll;
+export { Dice, flip, roll };
