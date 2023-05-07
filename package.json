@@ -2,7 +2,7 @@
   "name": "roll-anything",
   "sideEffects": false,
   "type": "module",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A very tiny dice util. You can roll a dice with any amount of sides.",
   "module": "./dist/index.es.js",
   "main": "./dist/index.cjs",
