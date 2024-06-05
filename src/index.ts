@@ -5,8 +5,8 @@
  * @returns {number}
  */
 export function roll(minOrMax?: number, max?: number): number {
-  let _min = 0,
-      _max = 100
+  let _min = 0
+  let _max = 100
   if (minOrMax === void 0) {
     // keep 0 - 100
   } else if (max === void 0) {
@@ -35,7 +35,11 @@ export function flip(): 'heads' | 'tails' {
  * @param {?number} [sides=6] The number of sides
  * @returns {{ sides: number, roll: () => number, rollAssert: (target: number) => boolean }}
  */
-export function Dice(sides = 6): { sides: number; roll: () => number, rollAssert: (target: number) => boolean } {
+export function Dice(sides = 6): {
+  sides: number
+  roll: () => number
+  rollAssert: (target: number) => boolean
+} {
   return {
     sides,
     roll(): number {

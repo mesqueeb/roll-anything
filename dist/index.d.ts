@@ -4,12 +4,12 @@
  * @param {number} [max] When passing 2 arguments, they are considered "min" and "max"; it returns a number between min - max; including min and max
  * @returns {number}
  */
-declare function roll(minOrMax?: number, max?: number): number;
+export declare function roll(minOrMax?: number, max?: number): number;
 /**
  * Returns 'heads' or 'tails' at random
  * @returns {'heads' | 'tails'}
  */
-declare function flip(): 'heads' | 'tails';
+export declare function flip(): 'heads' | 'tails';
 /**
  * Create a dice with any number of sides, dice(6).roll() to roll it!
  * You can also try rolling a specific side to return a boolean like so: dice(6).rollAssert(6).
@@ -18,10 +18,8 @@ declare function flip(): 'heads' | 'tails';
  * @param {?number} [sides=6] The number of sides
  * @returns {{ sides: number, roll: () => number, rollAssert: (target: number) => boolean }}
  */
-declare function Dice(sides?: number): {
+export declare function Dice(sides?: number): {
     sides: number;
     roll: () => number;
     rollAssert: (target: number) => boolean;
 };
-
-export { Dice, flip, roll };
