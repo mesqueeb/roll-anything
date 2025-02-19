@@ -1,6 +1,6 @@
 {
   "name": "roll-anything",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "A very tiny dice util. You can roll a dice with any amount of sides.",
   "type": "module",
   "sideEffects": false,
