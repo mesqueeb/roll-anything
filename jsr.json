@@ -1,0 +1,12 @@
+{
+  "name": "@mesqueeb/roll-anything",
+  "version": "4.0.1",
+  "exports": "./src/index.ts",
+  "publish": {
+    "include": [
+      "src/**",
+      "README.md",
+      "LICENSE"
+    ]
+  }
+}
